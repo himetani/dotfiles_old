@@ -35,6 +35,9 @@ NeoBundleCheck
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'Shougo/neocomplcache'
 "***/NeoBundle
 
 "/***Solarized setting
@@ -47,11 +50,10 @@ colorscheme solarized
 "***/Solarized
 
 "/***NERDTree
-autocmd VimEnter * execute 'NERDTree'
+"autocmd VimEnter * execute 'NERDTree'
 autocmd VimEnter * execute 'wincmd w'
-nnoremap <C-n> gt
-nnoremap <C-p> gT
-"***/NERDTree
+nnoremap <C-e> :NERDTreeToggle
+"***/NERDTre
 
 
 " /***
@@ -62,6 +64,10 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven  ctermbg=140
 let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_guide_size=1
 "***/vim-indent-guides
+
+"/***"javascript-libraries-syntax
+let g:used_javascript_libs = 'angularjs,angularui'
+"***/javascript-libraries-syntax
 
 "/***General Setting
 set clipboard=unnamed
@@ -74,6 +80,8 @@ set ruler "ルーラーの表示
 set showcmd "入力中のコマンドをステータスに表示する
 set showmatch "括弧入力時の対応する括弧を表示
 set laststatus=2 "ステータスラインを常に表示
+set cursorline
+set cursorcolumn
 
 "Programing Help
 syntax on "カラー表示
