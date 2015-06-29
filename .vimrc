@@ -38,6 +38,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'derekwyatt/vim-scala'
 "***/NeoBundle
 
 "/***Solarized setting
@@ -90,6 +91,10 @@ set autoindent "改行の継続
 set expandtab "タブの代わりに空白文字挿入
 set ts=4 sw=4 sts=4 "タブは半角4文字分のスペース
 set backspace=indent,eol,start
+noremap! ¥ \
+noremap! \ ¥
+autocmd FileType * setlocal formatoptions-=ro "自動コメントアウトの無効化
+
 
 " ファイルを開いた際に、前回終了時の行で起動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
@@ -121,3 +126,6 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 if !exists('g:neocomplete#sources#omni#input_patterns')
     let g:neocomplete#sources#omni#input_patterns = {}
 endif
+
+"scala
+au BufRead,BufNewFile *.scala set filetype=scala
