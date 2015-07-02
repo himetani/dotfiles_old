@@ -17,6 +17,16 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
+"/***NeoBundle's Plugins
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'Shougo/neocomplete'
+NeoBundle 'derekwyatt/vim-scala'
+"***/NeoBundle
+
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
@@ -31,15 +41,6 @@ filetype plugin indent on
 " this will conveniently prompt you to install them.
 NeoBundleCheck
 
-"/***NeoBundle's Plugins
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'othree/javascript-libraries-syntax.vim'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'derekwyatt/vim-scala'
-"***/NeoBundle
 
 "/***Solarized setting
 let g:solarized_termcolors=256
